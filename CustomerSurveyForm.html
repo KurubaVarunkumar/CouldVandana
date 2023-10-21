@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>
+            Customer Survey Form
+        </title>
+        <style>
+            .outer-container{
+                display:flex;
+                justify-content: center;
+                border:1px solid;
+                height: 120%;
+                max-width: auto;
+                background-color: rgb(0, 116, 173);
+                position: relative;
+                font-size: medium;
+            }
+            .inner-container{
+                border:1px solid;
+                height:80%;
+                width:500px;
+                background-color: white;
+                margin-top: 40px;
+                padding-left: 15px;
+                font-size: medium;
+            }
+          #head-tag{
+            color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 5vh;
+            font-weight: bolder;
+            margin-left: 10%;
+            letter-spacing: 2px;
+           }
+           #bottom-tag{
+            letter-spacing: 0.5px;
+            color:aliceblue;
+           }
+            
+        </style>
+    </head>
+    <body>
+        <div class="outer-container">
+            <div>
+            <span id="head-tag">Customer Survey Form</span>
+           <!-- </div> -->
+            <div class="inner-container">
+                <form>
+                         <div class="name">
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Email</td>
+                                </tr>  <br>
+                                <tr>
+                                    <td><input type="text" style="height:40px;width:200px"></td>
+                                    <td><input type="text"style="height:40px;width:200px"></td>
+                                </tr>
+                            </table>
+                         </div><br><br>
+                    <label>Is this first time You are using our products & services?</lable>
+                    <br><br>
+                    <input type="radio" name="feedback" value="Yes" id="Yes">
+                    <label for="Yes">Yes</label>
+                    <input type="radio" name="feedback" value="No" id="No">
+                    <label for="No">No</label><br><br>
+                    <label>Would you suggestion to your friends and colleague?</label><br><br>
+                    <input type="radio" name="feedback" value="Yes" id="Yes">
+                    <label for="Yes">Yes</label>
+                    <input type="radio" name="feedback" value="No" id="No">
+                    <label for="No">No</label><br><br>
+                    <lable>
+                    How satisfied are you with our company overall?
+                    </lable><br><br><br>
+                    <input type="radio" name="feedback" value="satisfied" id="satisfied">
+                    <label for="satisfied">Satisfied</label>
+
+                <input type="radio" name="feedback" value="undecided" id="undecided">
+                <label for="undecided">Undecided</label>
+
+                 <input type="radio" name="feedback" value="unsatisfied" id="unsatisfied">
+                 <label for="unsatisfied">Unsatisfied</label><br><br>
+                <lable>
+                Do you have suggestion to improve our service?
+                </lable><br><br><br>
+                <input type="text" style="width: 500px; height: 100px;">  <br><br>
+                 <input type="submit" value="Submit" style="background-color: rgb(73, 153, 244);color:white;height: 40px;width:70px;border:none ">  </form> 
+            </div><br><br>
+            <div>
+                <span id="bottom-tag">©2018 Customer Survey Form. All Rights Reserved | Reserved | Design by </span>
+                <span>W3Layouts</span>
+            </div>
+        </div>
+    </body>
+</html>
+
+

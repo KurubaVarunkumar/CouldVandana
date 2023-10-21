@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+        <style>
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+             }
+            .outer-container{
+                background-color: gray;
+                display: flex;
+                justify-content: center; /* Center horizontally */
+                align-items: center;
+                height: 500px;
+                width: 600px;
+                
+            
+            }
+            .inner-container{
+                background-color: transparent;
+                border:1px solid ;
+                height:383px;
+                width: 300px;  /* Center vertically */
+                
+            }
+            .display{
+                border:1px solid;
+                height:50px;
+                width: 250px;
+                background-color: white;
+            }
+            .numberpanel{
+                border:1px solid;
+                height:328px;
+                width: 250px; 
+                background-color: black;
+            }
+            .AC{
+                border:1px solid;
+                height:50px;
+                width: 50px; 
+                margin-left:250px;
+                margin-top:-52px;
+                background-color: rgb(30, 157, 157);
+            }
+            .operations{
+                border:1px solid;
+                height:250px;
+                width: 50px; 
+                margin-left:250px;
+                margin-top:-330px;
+                background-color: gray;
+            }
+            .table-1{
+                height: 40vh;
+                width: 40%;
+                background-color: grey;
+            }
+            
+        </style>
+    </head> 
+    <body>
+       
+        <div class="outer-container">
+            <div class="inner-container">
+                <div class="display">
+                    <input type="text" id="display" style="height: 50px;width: 250px;">
+                </div>
+                <div class="AC">
+                    <button onclick="clearDisplay('AC')" style="color:white ;height:50px ;width:50px;background-color: green;">AC</button>
+
+                </div>
+                <div class="numberpanel">
+                    <button onclick="addToDisplay('9')" style="color:white ;height:83px ;width:80px;background-color: black;">9</button>
+                    <button onclick="addToDisplay('8')" style="color:white ;height:83px ;width:80px;background-color: black;">8</button>
+                    <button onclick="addToDisplay('7')" style="color:white ;height:83px ;width:80px;background-color: black;">7</button>
+                    <button onclick="addToDisplay('4')" style="color:white ;height:83px ;width:80px;background-color: black;">4</button>
+                    <button onclick="addToDisplay('5')" style="color:white ;height:83px ;width:80px;background-color: black;">5</button>
+                    <button onclick="addToDisplay('6')" style="color:white ;height:83px ;width:80px;background-color: black;">6</button>
+                    <button onclick="addToDisplay('1')" style="color:white ;height:83px ;width:80px;background-color: black;">1</button>
+                    <button onclick="addToDisplay('2')" style="color:white ;height:83px ;width:80px;background-color: black;">2</button>
+                    <button onclick="addToDisplay('3')" style="color:white ;height:83px ;width:80px;background-color: black;">3</button>
+                    <button onclick="addToDisplay('.')" style="color:white ;height:83px ;width:80px;background-color: black;">.</button>
+                    <button onclick="addToDisplay('0')" style="color:white ;height:83px ;width:80px;background-color: black;">0</button>
+                    <button onclick="calculateResult()" style="color:white ;height:83px ;width:80px;background-color: black;">=</button>
+                </div>
+                <div class="operations">
+                    <button onclick="addToDisplay('+')" style="color:white ;height:83px ;width:50px;background-color: gray;">+</button>
+                    <button onclick="addToDisplay('-')" style="color:white ;height:83px ;width:50px;background-color: gray;">-</button>
+                    <button onclick="addToDisplay('/')" style="color:white ;height:83px ;width:50px;background-color: gray;">/</button>
+                    <button onclick="addToDisplay('*')" style="color:white ;height:83px ;width:50px;background-color: gray;">X</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function addToDisplay(value) {
+                document.getElementById("display").value += value;
+            }
+    
+            function clearDisplay() {
+                document.getElementById("display").value = "";
+            }
+    
+            function calculateResult() {
+                try {
+                    var result = eval(document.getElementById("display").value);
+                    document.getElementById("display").value = result;
+                } catch (error) {
+                    document.getElementById("display").value = "Error";
+                }
+            }
+        </script>
+    </body>
+</html>
